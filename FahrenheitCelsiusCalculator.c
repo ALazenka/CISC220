@@ -7,19 +7,11 @@
 int main()
 {
 	
-	float fahr, celsius;
-	int upper, lower, step;
+	int fahr;
 
-	lower = 0; /* lower threshold of the temp table */
-	upper = 300; /* upper threshold of the temp table */
-	step = 20; /* change in temperature */
-
-	fahr = lower;
-
-	while (fahr <= upper) {
-		celsius = 5.0 * (fahr - 32.0) / 9.0;
-		printf("%3.0f %6.1f\n", fahr, celsius);
-		fahr = fahr + step;
+	printf("Temprature Convertion Table - Celsius to Fahrenheit");
+	for (fahr = 0; fahr <= 300; fahr = fahr + 20) {
+		printf("%3.0d %6.1f\n", fahr, (5.0/9.0)*(fahr - 32));
 	}
 
 }
