@@ -2,17 +2,23 @@
 	This program will be able to print of a set list of temperatures,
 	converting them from fahrenheit to celsius.
 */
-#include 
+#include <stdio.h>
 
-main()
+int main()
 {
 	
 	int fahr, celsius, upper, lower, step;
 
-	lower = 0;
+	lower = 0; /* lower threshold of the temp table */
+	upper = 300; /* upper threshold of the temp table */
+	step = 20; /* change in temperature */
 
-	upper = 300;
+	fahr = lower;
 
-	step = 20;
+	while (fahr <= upper) {
+		celsius = 5 * (fahr - 32) / 9;
+		printf("%d\t%d\n", fahr, celsius);
+		fahr = fahr + step;
+	}
 
 }
