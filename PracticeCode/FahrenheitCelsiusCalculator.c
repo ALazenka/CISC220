@@ -12,11 +12,14 @@
 int main()
 {
 	
-	int fahr;
+ 	int fahr;
 
-	printf("Temprature Convertion Table - Celsius to Fahrenheit\n");
-	for (fahr = LOWER; fahr <= UPPER; fahr = fahr + STEP) {
-		printf("%3.0d %6.1f\n", fahr, (5.0/9.0)*(fahr - 32));
-	}
+	printf("Enter a fahrenheit to be converted...\n");
+ 	scanf("%d", &fahr);
+
+	printf("Here is the temperature you entered in celsius:\n");
+	printf("%3.0d %6.1f\n", fahr, (5.0/9.0)*(fahr - 32));
+
+	return 0;
 
 }
